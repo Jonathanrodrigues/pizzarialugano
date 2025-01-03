@@ -1,8 +1,11 @@
+
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
-import { Pizza } from 'lucide-react';
+import { Menu, X, Pizza  } from 'lucide-react';
+
+import NavMenu from '../shared/navMenu';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,10 +19,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+      <NavMenu />
+      {/* <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between h-16">
               <Link href="/" className="flex items-center gap-2">
@@ -34,7 +39,7 @@ export default function RootLayout({
               </div>
             </div>
           </div>
-        </nav>
+        </nav> */}
         <main>{children}</main>
         <footer className="bg-gray-900 text-white py-12">
           <div className="max-w-7xl mx-auto px-4">

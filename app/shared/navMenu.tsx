@@ -4,6 +4,10 @@ import { useState } from 'react'
 import { Menu, X, Pizza } from 'lucide-react'
 import Link from 'next/link'
 
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'] });
+
 export default function NavMenu() {
   const [isOpen, setIsOpen] = useState(false)
 

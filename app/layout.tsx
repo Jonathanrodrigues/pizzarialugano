@@ -2,10 +2,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Link from 'next/link';
-import { Menu, X, Pizza  } from 'lucide-react';
 
-import NavMenu from '../shared/navMenu';
+import NavMenu from './shared/navMenu';
 
 const inter = Inter({ subsets: ['latin'] });
 

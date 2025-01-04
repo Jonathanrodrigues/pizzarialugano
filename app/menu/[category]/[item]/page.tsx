@@ -21,7 +21,7 @@ export default function ItemDetail() {
     const itemNumber = params.item;
 
     const item = getMenuItem(category, itemNumber);
-    const ingredients = getIngredients();
+    const ingredients = getIngredients(category);
 
     if (!item) {
         return <div>Item not found</div>;

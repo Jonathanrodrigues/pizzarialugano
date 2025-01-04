@@ -3,32 +3,38 @@
       {
         "id": "extra-cheese",
         "name": "Extra Cheese",
-        "price": 1.50
+        "price": 1.50,
+        "category": "all"
       },
       {
         "id": "mushrooms",
         "name": "Mushrooms",
-        "price": 1.00
+        "price": 1.00,
+        "category": "pizzas"
       },
       {
         "id": "olives",
         "name": "Olives",
-        "price": 1.00
+        "price": 1.00,
+        "category": "pizzas"
       },
       {
         "id": "pepperoni",
         "name": "Extra Pepperoni",
-        "price": 2.00
+        "price": 2.00,
+        "category": "pizzas"
       },
       {
         "id": "onions",
         "name": "Onions",
-        "price": 0.75
+        "price": 0.75,
+        "category": "pizzas"
       },
       {
         "id": "bell-peppers",
         "name": "Bell Peppers",
-        "price": 1.00
+        "price": 1.00,
+        "category": "pizzas"
       }
     ]
   }

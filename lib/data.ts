@@ -46,6 +46,7 @@ export type Ingredient = {
     id: string;
     name: string;
     price: number;
+    category?: string;
 };
 
 export function getMenuData(): MenuData {
@@ -56,7 +57,18 @@ export function getInfo(): Info {
     return infoData;
 }
 
-export function getIngredients(): Ingredient[] {
+export function getIngredients(category: string): Ingredient[] {
+    switch (category) {
+        case 'pizzas':
+            return ingredientsData.extras.filter(item => (item.category === 'pizzas' || item.category === 'all')) || [];
+        case 'desserts':
+            return ingredientsData.extras.filter(item => (item.category === 'desserts' || item.category === 'all')) || [];
+        case 'pasta':
+            return ingredientsData.extras.filter(item => (item.category === 'pasta' || item.category === 'all')) || [];
+        default:
+            return ingredientsData.extras.filter(item => (item.category === 'all')) || [];
+    }
+
     return ingredientsData.extras;
 }
 

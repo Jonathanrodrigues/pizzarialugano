@@ -1,3 +1,36 @@
+# Pizzaria Lugano Website
+
+## Adding Menu Items
+
+To add new menu items, follow these steps:
+
+1. Add the item's image to the appropriate folder in `public/images/menu/`:
+   - Pizza images go in `/images/menu/pizzas/`
+   - Pasta images go in `/images/menu/pasta/`
+   - Dessert images go in `/images/menu/desserts/`
+
+2. Edit the `data/menu.json` file and add your item in the correct category:
+
+```json
+{
+  "pizzas": [
+    {
+      "name": "Your Pizza Name",
+      "description": "Description of ingredients",
+      "price": "€00.00",
+      "image": "/images/menu/pizzas/your-image-name.jpg",
+      "category": "Traditional or Special"
+    }
+  ]
+}
+```
+
+Important notes:
+- Image names should be lowercase and use hyphens for spaces
+- Images should be in JPG format
+- Recommended image size: 800x600 pixels
+- Keep image file sizes under 200KB for better performance
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

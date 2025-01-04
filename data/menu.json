@@ -5,7 +5,7 @@
         "name": "Margherita",
         "description": "Fresh tomato sauce, mozzarella, and basil",
         "price": "€10.90",
-        "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002",
+        "image": "/images/menu/pizzas/1.jpg",
         "category": "Traditional"
       },
       {

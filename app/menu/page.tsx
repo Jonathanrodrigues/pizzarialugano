@@ -3,48 +3,12 @@
 import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import Image from "next/image";
-
-const menuItems = {
-  pizzas: [
-    {
-      name: "Margherita",
-      description: "Fresh tomato sauce, mozzarella, and basil",
-      price: "€10.90",
-      image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002"
-    },
-    {
-      name: "Pepperoni",
-      description: "Tomato sauce, mozzarella, and spicy pepperoni",
-      price: "€12.90",
-      image: "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5"
-    },
-    {
-      name: "Quattro Formaggi",
-      description: "Mozzarella, gorgonzola, parmesan, and gouda",
-      price: "€13.90",
-      image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
-    }
-  ],
-  pasta: [
-    {
-      name: "Spaghetti Carbonara",
-      description: "Creamy sauce with pancetta and pecorino",
-      price: "€11.90",
-      image: "https://images.unsplash.com/photo-1612874742237-6526221588e3"
-    }
-  ],
-  desserts: [
-    {
-      name: "Tiramisu",
-      description: "Classic Italian dessert with coffee and mascarpone",
-      price: "€5.90",
-      image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9"
-    }
-  ]
-};
+import { getMenuData } from "@/lib/data";
+import type { MenuData } from "@/lib/data";
 
 export default function Menu() {
   const [activeCategory, setActiveCategory] = useState("pizzas");
+  const menuItems: MenuData = getMenuData();
 
   return (
     <div className="min-h-screen bg-gray-50 py-20 px-4">
@@ -70,7 +34,7 @@ export default function Menu() {
 
         {/* Menu Items Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {menuItems[activeCategory as keyof typeof menuItems].map((item, index) => (
+          {menuItems[activeCategory]?.map((item, index) => (
             <Card key={index} className="overflow-hidden">
               <div className="relative h-48">
                 <Image
@@ -86,6 +50,11 @@ export default function Menu() {
                   <span className="text-red-600 font-semibold">{item.price}</span>
                 </div>
                 <p className="text-gray-600">{item.description}</p>
+                {item.category && (
+                  <span className="inline-block mt-2 px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">
+                    {item.category}
+                  </span>
+                )}
               </div>
             </Card>
           ))}

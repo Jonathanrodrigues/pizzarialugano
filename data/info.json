@@ -1,0 +1,26 @@
+{
+    "contact": {
+      "address": {
+        "street": "Rua de Santo António, 28",
+        "postalCode": "5400-219",
+        "city": "Chaves",
+        "region": "Vila Real",
+        "country": "Portugal"
+      },
+      "phone": "+351 276 123 100",
+      "email": "info@pizzarialugano.pt"
+    },
+    "hours": {
+      "monday": "11:30 - 22:00",
+      "tuesday": "11:30 - 22:00",
+      "wednesday": "11:30 - 22:00",
+      "thursday": "11:30 - 22:00",
+      "friday": "11:30 - 22:00",
+      "saturday": "11:30 - 23:00",
+      "sunday": "12:00 - 22:00"
+    },
+    "social": {
+      "facebook": "https://facebook.com/pizzarialugano",
+      "instagram": "https://instagram.com/pizzarialugano"
+    }
+  }

@@ -1,0 +1,41 @@
+{
+    "pizzas": [
+      {
+        "name": "Margherita",
+        "description": "Fresh tomato sauce, mozzarella, and basil",
+        "price": "€10.90",
+        "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002",
+        "category": "Traditional"
+      },
+      {
+        "name": "Pepperoni",
+        "description": "Tomato sauce, mozzarella, and spicy pepperoni",
+        "price": "€12.90",
+        "image": "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5",
+        "category": "Traditional"
+      },
+      {
+        "name": "Quattro Formaggi",
+        "description": "Mozzarella, gorgonzola, parmesan, and gouda",
+        "price": "€13.90",
+        "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38",
+        "category": "Special"
+      }
+    ],
+    "pasta": [
+      {
+        "name": "Spaghetti Carbonara",
+        "description": "Creamy sauce with pancetta and pecorino",
+        "price": "€11.90",
+        "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3"
+      }
+    ],
+    "desserts": [
+      {
+        "name": "Tiramisu",
+        "description": "Classic Italian dessert with coffee and mascarpone",
+        "price": "€5.90",
+        "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9"
+      }
+    ]
+  }

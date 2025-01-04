@@ -1,8 +1,12 @@
 "use client";
 
 import { Mail, MapPin, Phone } from "lucide-react";
+import { getInfo, getFormattedAddress } from "@/lib/data";
 
 export default function About() {
+  const { contact, hours } = getInfo();
+  const formattedAddress = getFormattedAddress(contact);
+
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 py-20">
@@ -15,11 +19,11 @@ export default function About() {
               <MapPin className="w-6 h-6 text-red-600 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold mb-2">Address</h3>
-                <p className="text-gray-600">
-                  Rua de Santo António, 28<br />
-                  5400-219 Chaves<br />
-                  Vila Real, Portugal
-                </p>
+                <div className="text-gray-600">
+                  {formattedAddress.map((line, index) => (
+                    <p key={index}>{line}</p>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -27,7 +31,7 @@ export default function About() {
               <Phone className="w-6 h-6 text-red-600 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold mb-2">Phone</h3>
-                <p className="text-gray-600">+351 276 123 456</p>
+                <p className="text-gray-600">{contact.phone}</p>
               </div>
             </div>
 
@@ -35,16 +39,18 @@ export default function About() {
               <Mail className="w-6 h-6 text-red-600 mt-1" />
               <div>
                 <h3 className="text-xl font-semibold mb-2">Email</h3>
-                <p className="text-gray-600">info@pizzarialugano.pt</p>
+                <p className="text-gray-600">{contact.email}</p>
               </div>
             </div>
 
             <div className="mt-8">
               <h3 className="text-xl font-semibold mb-4">Opening Hours</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Monday - Friday: 11:30 - 22:00</p>
-                <p>Saturday: 11:30 - 23:00</p>
-                <p>Sunday: 12:00 - 22:00</p>
+                {Object.entries(hours).map(([day, time]) => (
+                  <p key={day}>
+                    {day.charAt(0).toUpperCase() + day.slice(1)}: {time}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
@@ -52,7 +58,7 @@ export default function About() {
           {/* Map */}
           <div className="h-[400px] bg-gray-100 rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2987.4!2d-7.4706!3d41.7405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3a3c9f5e5e5e5e%3A0x5e5e5e5e5e5e5e5e!2sChaves%2C%20Portugal!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Lugano%20Pizzaria%2C%20EDF%20Mestre%20de%20Avis%2C%20Av.%20Nuno%20%C3%81lvares%20loja%206%2C%205400-419%20Chaves&zoom=10&maptype=roadmap"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -65,3 +71,4 @@ export default function About() {
     </div>
   );
 }
+

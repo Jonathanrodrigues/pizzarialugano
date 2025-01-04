@@ -1,6 +1,7 @@
 {
     "pizzas": [
       {
+        "number": 1,
         "name": "Margherita",
         "description": "Fresh tomato sauce, mozzarella, and basil",
         "price": "€10.90",
@@ -8,6 +9,7 @@
         "category": "Traditional"
       },
       {
+        "number": 2,
         "name": "Pepperoni",
         "description": "Tomato sauce, mozzarella, and spicy pepperoni",
         "price": "€12.90",
@@ -15,6 +17,7 @@
         "category": "Traditional"
       },
       {
+        "number": 3,
         "name": "Quattro Formaggi",
         "description": "Mozzarella, gorgonzola, parmesan, and gouda",
         "price": "€13.90",
@@ -24,6 +27,7 @@
     ],
     "pasta": [
       {
+        "number": 101,
         "name": "Spaghetti Carbonara",
         "description": "Creamy sauce with pancetta and pecorino",
         "price": "€11.90",
@@ -32,6 +36,7 @@
     ],
     "desserts": [
       {
+        "number": 201,
         "name": "Tiramisu",
         "description": "Classic Italian dessert with coffee and mascarpone",
         "price": "€5.90",

@@ -1,0 +1,34 @@
+{
+    "extras": [
+      {
+        "id": "extra-cheese",
+        "name": "Extra Cheese",
+        "price": 1.50
+      },
+      {
+        "id": "mushrooms",
+        "name": "Mushrooms",
+        "price": 1.00
+      },
+      {
+        "id": "olives",
+        "name": "Olives",
+        "price": 1.00
+      },
+      {
+        "id": "pepperoni",
+        "name": "Extra Pepperoni",
+        "price": 2.00
+      },
+      {
+        "id": "onions",
+        "name": "Onions",
+        "price": 0.75
+      },
+      {
+        "id": "bell-peppers",
+        "name": "Bell Peppers",
+        "price": 1.00
+      }
+    ]
+  }

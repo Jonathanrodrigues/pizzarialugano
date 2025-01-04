@@ -36,7 +36,7 @@ export default function NavMenu() {
       </div>
       {isOpen && (
         <div className="fixed inset-0 bg-black/50 z-40 w-screen h-screen">
-          <div className="fixed inset-0 bg-white px-4 z-50 w-screen h-screen">
+          <div className="fixed inset-0 bg-white/90 px-4 z-50 w-screen h-screen">
             <div className="flex items-center justify-between h-16">
               <Link href="/" className="flex items-center gap-2 ">
                 <Pizza className="w-6 h-6 text-red-600" />

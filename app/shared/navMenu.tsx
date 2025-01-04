@@ -46,12 +46,14 @@ export default function NavMenu() {
                 <X className="w-6 h-6" />
               </button>
             </div>
-            <nav className="flex flex-col gap-4 mt-4">
-              <Link href="/" className="text-gray-600 hover:text-gray-900" onClick={toggleMenu}>Home</Link>
-              <Link href="/menu" className="text-gray-600 hover:text-gray-900" onClick={toggleMenu}>Menu</Link>
-              <Link href="/about" className="text-gray-600 hover:text-gray-900" onClick={toggleMenu}>About</Link>
-              <Link href="/history" className="text-gray-600 hover:text-gray-900" onClick={toggleMenu}>History</Link>
-            </nav>
+            <div className="h-full flex items-center justify-center">
+              <nav className="flex flex-col gap-8 h-2/3 my-auto mx-2">
+                <Link href="/" className="text-gray-600 hover:text-gray-900 text-4xl text-center" onClick={toggleMenu}>Home</Link>
+                <Link href="/menu" className="text-gray-600 hover:text-gray-900 text-4xl text-center" onClick={toggleMenu}>Menu</Link>
+                <Link href="/about" className="text-gray-600 hover:text-gray-900 text-4xl text-center" onClick={toggleMenu}>About</Link>
+                <Link href="/history" className="text-gray-600 hover:text-gray-900 text-4xl text-center"  onClick={toggleMenu}>History</Link>
+              </nav>
+            </div>
           </div>
         </div>
       )}
